@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Here it will be possible to browse different responsive layout patterns
+          Responsive Layout Pattern Viewer
         </p>
       </header>
     </div>
