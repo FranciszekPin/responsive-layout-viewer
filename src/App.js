@@ -1,8 +1,7 @@
 import './App.css';
-import './layout-switcher/LayoutSwitcherLeft.js'
-import './layout-switcher/LayoutSwitcherRight.js'
-import LayoutSwitcherLeft from "./layout-switcher/LayoutSwitcherLeft";
-import LayoutSwitcherRight from "./layout-switcher/LayoutSwitcherRight";
+import './layoutBrowser/LayoutBrowser'
+import LayoutBrowser from "./layoutBrowser/LayoutBrowser";
+
 
 function App() {
     return (
@@ -12,8 +11,7 @@ function App() {
                     Responsive Layout Pattern Viewer
                 </p>
             </header>
-            <LayoutSwitcherLeft />
-            <LayoutSwitcherRight />
+            <LayoutBrowser />
         </div>
     );
 }
