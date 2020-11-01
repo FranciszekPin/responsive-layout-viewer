@@ -1,9 +1,9 @@
 import './LayoutSwitcher.css'
 
-function LayoutSwitcherLeft() {
+function LayoutSwitcherLeft(props) {
     const leftArrow = '<';
     return (
-        <div className="LayoutSwitcher">
+        <div className="LayoutSwitcher" onClick={props.onClick}>
             <p>
                 {leftArrow}
             </p>
