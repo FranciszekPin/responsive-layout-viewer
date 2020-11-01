@@ -13,11 +13,17 @@ class LayoutBrowser extends Component {
     }
 
     incrementLayoutNumber = () => {
-        this.setState({layoutNumber: Math.min(this.state.layoutNumber+1, this.maximalLayoutNumber)});
+        this.setState(
+            state =>
+                ({layoutNumber: Math.min(state.layoutNumber+1, this.maximalLayoutNumber)})
+        );
     }
 
     decrementLayoutNumber = () => {
-        this.setState({layoutNumber: Math.max(this.state.layoutNumber-1, this.minimalLayoutNumber)});
+        this.setState(
+            state =>
+                ({layoutNumber: Math.max(state.layoutNumber-1, this.minimalLayoutNumber)})
+        );
     }
 
     render() {
