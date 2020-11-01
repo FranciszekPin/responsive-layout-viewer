@@ -1,9 +1,9 @@
 import './LayoutPreview.css'
 
-function LayoutPreview() {
+function LayoutPreview(props) {
     return (
         <div className="LayoutPreview">
-
+            {props.layoutNumber}
         </div>
     )
 }
