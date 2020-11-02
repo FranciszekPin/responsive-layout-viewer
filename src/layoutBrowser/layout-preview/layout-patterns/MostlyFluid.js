@@ -1,6 +1,6 @@
 function MostlyFluid() {
     return (
-        <div className={MostlyFluid}>
+        <div className="MostlyFluid">
             <p>Mostly Fluid</p>
         </div>
     );
