@@ -3,7 +3,7 @@ import './LayoutPreview.css'
 function LayoutPreview(props) {
     return (
         <div className="LayoutPreview">
-            {props.layoutNumber}
+            {props.layoutToShow}
         </div>
     )
 }
