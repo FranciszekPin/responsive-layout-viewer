@@ -9,8 +9,7 @@ class LayoutBrowser extends Component {
     constructor(props) {
         super(props);
         this.state = {layoutNumber: 0};
-        this.minimalLayoutNumber = 0;
-        this.maximalLayoutNumber = 1;
+        this.numberOfLayouts = 2;
 
         this.layouts = [<MostlyFluid />, null];
     }
@@ -18,14 +17,14 @@ class LayoutBrowser extends Component {
     incrementLayoutNumber = () => {
         this.setState(
             state =>
-                ({layoutNumber: Math.min(state.layoutNumber+1, this.maximalLayoutNumber)})
+                ({layoutNumber: (state.layoutNumber+1) % this.numberOfLayouts})
         );
     }
 
     decrementLayoutNumber = () => {
         this.setState(
             state =>
-                ({layoutNumber: Math.max(state.layoutNumber-1, this.minimalLayoutNumber)})
+                ({layoutNumber: (state.layoutNumber-1 + this.numberOfLayouts) % this.numberOfLayouts})
         );
     }
 
