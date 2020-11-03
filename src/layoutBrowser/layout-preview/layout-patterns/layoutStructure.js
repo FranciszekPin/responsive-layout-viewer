@@ -1,3 +1,5 @@
+import './LayoutStyles.css';
+
 const layoutStructure = (
     <div className="container" >
         <div className="c1"></div>

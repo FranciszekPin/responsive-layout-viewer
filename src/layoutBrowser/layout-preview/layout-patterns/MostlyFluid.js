@@ -1,3 +1,5 @@
+import './LayoutStyles.css';
+
 function MostlyFluid(props) {
     return (
         <div className="MostlyFluid">
