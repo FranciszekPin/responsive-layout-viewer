@@ -1,7 +1,7 @@
-function MostlyFluid() {
+function MostlyFluid(props) {
     return (
         <div className="MostlyFluid">
-            <p>Mostly Fluid</p>
+            {props.layoutStructure}
         </div>
     );
 }

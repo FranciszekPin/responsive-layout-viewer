@@ -5,6 +5,7 @@ import LayoutPreview from "./layout-preview/LayoutPreview";
 import {Component} from "react";
 import MostlyFluid from "./layout-preview/layout-patterns/MostlyFluid";
 import ColumnDrop from "./layout-preview/layout-patterns/ColumnDrop";
+import layoutStructure from "./layout-preview/layout-patterns/layoutStructure";
 
 class LayoutBrowser extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class LayoutBrowser extends Component {
         this.state = {layoutNumber: 0};
         this.numberOfLayouts = 2;
 
-        this.layouts = [<MostlyFluid />, <ColumnDrop />];
+        this.layouts = [<MostlyFluid layoutStructure={layoutStructure}/>, <ColumnDrop layoutStructure={layoutStructure}/>];
     }
 
     incrementLayoutNumber = () => {

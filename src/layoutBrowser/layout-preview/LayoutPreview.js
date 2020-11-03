@@ -5,7 +5,7 @@ function LayoutPreview(props) {
         <div className="LayoutPreview">
             {props.layoutToShow}
         </div>
-    )
+    );
 }
 
 export default LayoutPreview;
