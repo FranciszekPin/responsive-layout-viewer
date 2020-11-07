@@ -10,7 +10,7 @@ import ResizeLayout from "./resize-layout-slider/ResizeLayout";
 class LayoutBrowser extends Component {
     constructor(props) {
         super(props);
-        this.state = {layoutNumber: 0};
+        this.state = {layoutNumber: 0, viewerWidth: 800};
         this.numberOfLayouts = 2;
 
         this.layouts = [<MostlyFluid/>, <ColumnDrop/>];
@@ -30,6 +30,9 @@ class LayoutBrowser extends Component {
         );
     }
 
+    updateViewerWidth = (x) => {
+        this.setState({viewerWidth: x});
+    }
 
     render() {
         const actualLayoutToShow = this.layouts[this.state.layoutNumber];
@@ -37,11 +40,11 @@ class LayoutBrowser extends Component {
             <div>
                 <div className="LayoutBrowser">
                     <LayoutSwitcherLeft onClick={this.decrementLayoutNumber}/>
-                    <LayoutPreview layoutToShow={actualLayoutToShow}/>
+                    <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth} />
                     <LayoutSwitcherRight onClick={this.incrementLayoutNumber}/>
 
                 </div>
-                <ResizeLayout/>
+                <ResizeLayout updateViewerWidth={this.updateViewerWidth}/>
             </div>
         );
     }

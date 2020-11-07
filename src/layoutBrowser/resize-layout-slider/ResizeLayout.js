@@ -4,15 +4,23 @@ import {Component} from "react";
 class ResizeLayout extends Component {
     constructor(props) {
         super(props);
-        this.state = {x: 10, y: 10};
+        this.state = {x: 50};
     }
+
+
+
+    sliderMoved = ({x}) => {
+        this.setState(state => ({...state, x}));
+        this.props.updateViewerWidth(400+(8*x));
+    }
+
     render() {
         return (
             <div>
                 <Slider
                     axis="x"
                     x={this.state.x}
-                    onChange={({x}) => this.setState(state => ({...state, x}))}
+                    onChange={this.sliderMoved}
                 />
 
             </div>
