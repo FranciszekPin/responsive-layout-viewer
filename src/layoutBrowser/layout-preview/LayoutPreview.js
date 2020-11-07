@@ -5,7 +5,7 @@ function LayoutPreview(props) {
         <div className="LayoutPreview" style={{width: props.width+"px"}}>
             {props.layoutToShow}
         </div>
-    )
+    );
 }
 
 export default LayoutPreview;

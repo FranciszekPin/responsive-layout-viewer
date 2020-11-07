@@ -1,7 +1,9 @@
-function MostlyFluid() {
+import './LayoutStyles.css';
+
+function MostlyFluid(props) {
     return (
         <div className="MostlyFluid">
-            <p>Mostly Fluid</p>
+            {props.layoutStructure}
         </div>
     );
 }
