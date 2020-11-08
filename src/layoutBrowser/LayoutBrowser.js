@@ -13,8 +13,6 @@ class LayoutBrowser extends Component {
         this.state = {layoutNumber: 0, viewerWidth: 800};
         this.numberOfLayouts = 2;
 
-
-
         this.layouts = [<MostlyFluid layoutStructure={layoutStructure}/>, <ColumnDrop layoutStructure={layoutStructure}/>];
     }
 
