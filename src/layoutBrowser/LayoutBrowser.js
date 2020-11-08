@@ -37,15 +37,20 @@ class LayoutBrowser extends Component {
     render() {
         const actualLayoutToShow = this.layouts[this.state.layoutNumber];
         return (
-            <div>
                 <div className="LayoutBrowser">
-                    <LayoutSwitcherLeft onClick={this.decrementLayoutNumber}/>
                     <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth} />
-                    <LayoutSwitcherRight onClick={this.incrementLayoutNumber}/>
 
+                    <div className="UserControl">
+                        <div className="NavigationButtons">
+                            <LayoutSwitcherLeft onClick={this.decrementLayoutNumber}/>
+                            <LayoutSwitcherRight onClick={this.incrementLayoutNumber}/>
+                        </div>
+
+                        <ResizeLayout updateViewerWidth={this.updateViewerWidth}/>
+                    </div>
                 </div>
-                <ResizeLayout updateViewerWidth={this.updateViewerWidth}/>
-            </div>
+
+
         );
     }
 }
