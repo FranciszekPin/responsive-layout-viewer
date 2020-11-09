@@ -21,6 +21,14 @@ class ResizeLayout extends Component {
                     axis="x"
                     x={this.state.x}
                     onChange={this.sliderMoved}
+                    styles={{
+                        track: {
+                            backgroundColor: 'gray'
+                        },
+                        active: {
+                            backgroundColor: 'white'
+                        }
+                    }}
                 />
 
             </div>
