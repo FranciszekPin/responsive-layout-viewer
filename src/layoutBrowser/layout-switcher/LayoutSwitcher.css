@@ -5,6 +5,7 @@
     border: white solid 3px;
     height: 7vh;
     width: 7vh;
+    margin-right: 20px;
 }
 
 .LayoutSwitcher:hover {
