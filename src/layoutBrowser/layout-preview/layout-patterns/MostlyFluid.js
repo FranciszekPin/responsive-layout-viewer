@@ -1,4 +1,5 @@
 import './LayoutStyles.css';
+import './MostlyFluid.css';
 import {Component} from "react";
 
 class MostlyFluid extends Component {

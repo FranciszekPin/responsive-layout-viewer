@@ -24,50 +24,15 @@
 }
 
 .container {
-    background-color: white;
     height: 80vh;
+    background-color: white;
 }
 
-.MostlyFluid .container {
+.container {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: flex-start;
 }
-
-.MostlyFluid .c1, .MostlyFluid .c2, .MostlyFluid .c3, .MostlyFluid .c4, .MostlyFluid .c5 {
-    width: 100%;
-}
-
-@media (min-width: 300px) {
-    .MostlyFluid .c2, .MostlyFluid .c3, .MostlyFluid .c4, .MostlyFluid .c5 {
-        width: 50%;
-    }
-}
-
-@media (min-width: 500px) {
-    .MostlyFluid .c1 {
-        width: 60%;
-    }
-    .MostlyFluid .c2 {
-        width: 40%;
-    }
-    .MostlyFluid .c3, .MostlyFluid .c4 {
-        width: 33%;
-    }
-    .MostlyFluid .c5 {
-        width: 34%;
-    }
-}
-
-@media (min-width: 500px) {
-    .MostlyFluid .container {
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-
 
 
