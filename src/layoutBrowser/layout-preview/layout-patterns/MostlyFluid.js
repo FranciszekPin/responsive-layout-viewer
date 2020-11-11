@@ -1,11 +1,23 @@
 import './LayoutStyles.css';
+import {Component} from "react";
 
-function MostlyFluid(props) {
-    return (
-        <div className="MostlyFluid">
-            {props.layoutStructure}
-        </div>
-    );
+class MostlyFluid extends Component {
+
+
+    render() {
+        let actualClassName = "";
+        if (this.props.viewerWidth >= 0 && this.props.viewerWidth <= 500)
+            actualClassName = "small";
+        else if (this.props.viewerWidth <= 800)
+            actualClassName = "medium";
+        else
+            actualClassName = "large";
+        return (
+            <div className={actualClassName}>
+                {this.props.layoutStructure}
+            </div>
+        );
+    }
 }
 
 export default MostlyFluid;

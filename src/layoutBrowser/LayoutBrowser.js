@@ -13,7 +13,7 @@ class LayoutBrowser extends Component {
         this.state = {layoutNumber: 0};
         this.numberOfLayouts = 2;
 
-        this.layouts = [<MostlyFluid layoutStructure={layoutStructure}/>, <ColumnDrop layoutStructure={layoutStructure}/>];
+        this.layouts = [<MostlyFluid viewerWidth={this.state.viewerWidth} layoutStructure={layoutStructure}/>, <ColumnDrop layoutStructure={layoutStructure}/>];
     }
 
     incrementLayoutNumber = () => {
@@ -33,7 +33,11 @@ class LayoutBrowser extends Component {
 
 
     render() {
-        const actualLayoutToShow = this.layouts[this.state.layoutNumber];
+        let actualLayoutToShow = (<div> </div>);
+        if (this.state.layoutNumber === 0)
+            actualLayoutToShow = (<MostlyFluid viewerWidth={this.state.viewerWidth} layoutStructure={layoutStructure}/>);
+        else
+            actualLayoutToShow  = <ColumnDrop layoutStructure={layoutStructure}/>;
         return (
             <div className="LayoutBrowser">
                 <LayoutSwitcherLeft onClick={this.decrementLayoutNumber} />
