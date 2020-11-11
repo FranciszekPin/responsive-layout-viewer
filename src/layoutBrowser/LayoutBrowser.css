@@ -1,6 +1,23 @@
 .LayoutBrowser {
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+.UserControl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+
+.NavigationButtons {
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+    justify-content: space-between;
 }

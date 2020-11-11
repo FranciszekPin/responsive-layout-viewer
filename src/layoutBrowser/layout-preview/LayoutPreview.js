@@ -2,7 +2,7 @@ import './LayoutPreview.css'
 
 function LayoutPreview(props) {
     return (
-        <div className="LayoutPreview">
+        <div className="LayoutPreview" style={{width: props.width+"px"}}>
             {props.layoutToShow}
         </div>
     );
