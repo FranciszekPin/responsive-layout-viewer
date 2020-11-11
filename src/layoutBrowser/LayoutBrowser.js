@@ -6,14 +6,12 @@ import {Component} from "react";
 import MostlyFluid from "./layout-preview/layout-patterns/MostlyFluid";
 import ColumnDrop from "./layout-preview/layout-patterns/ColumnDrop";
 import ResizeLayout from "./resize-layout-slider/ResizeLayout";
-import layoutStructure from "./layout-preview/layout-patterns/layoutStructure";
+import LayoutStructure from "./layout-preview/layout-patterns/layoutStructure";
 class LayoutBrowser extends Component {
     constructor(props) {
         super(props);
         this.state = {layoutNumber: 0, viewerWidth: 800};
         this.numberOfLayouts = 2;
-
-        this.layouts = [<MostlyFluid viewerWidth={this.state.viewerWidth} layoutStructure={layoutStructure}/>, <ColumnDrop layoutStructure={layoutStructure}/>];
     }
 
     incrementLayoutNumber = () => {
@@ -35,9 +33,10 @@ class LayoutBrowser extends Component {
     }
 
     render() {
-        let actualLayoutToShow = (<div> </div>);
+        let actualLayoutToShow;
+        const layoutStructure = <LayoutStructure viewerWidth={this.state.viewerWidth} />
         if (this.state.layoutNumber === 0)
-            actualLayoutToShow = (<MostlyFluid viewerWidth={this.state.viewerWidth} layoutStructure={layoutStructure}/>);
+            actualLayoutToShow = (<MostlyFluid layoutStructure={layoutStructure}/>);
         else
             actualLayoutToShow  = <ColumnDrop layoutStructure={layoutStructure}/>;
         return (

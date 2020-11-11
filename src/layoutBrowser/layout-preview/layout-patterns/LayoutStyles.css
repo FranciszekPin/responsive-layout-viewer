@@ -24,15 +24,12 @@
 }
 
 .container {
-    height: 80vh;
-    background-color: white;
-}
-
-.container {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-content: flex-start;
+    height: 80vh;
+    background-color: white;
 }
 
 
