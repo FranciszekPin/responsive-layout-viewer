@@ -3,11 +3,9 @@ import './MostlyFluid.css';
 import {Component} from "react";
 
 class MostlyFluid extends Component {
-
-
     render() {
         return (
-            <div>
+            <div className="MostlyFluid">
                 {this.props.layoutStructure}
             </div>
         );

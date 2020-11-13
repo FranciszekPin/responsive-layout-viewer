@@ -7,6 +7,7 @@ import MostlyFluid from "./layout-preview/layout-patterns/MostlyFluid";
 import ColumnDrop from "./layout-preview/layout-patterns/ColumnDrop";
 import ResizeLayout from "./resize-layout-slider/ResizeLayout";
 import LayoutStructure from "./layout-preview/layout-patterns/layoutStructure";
+
 class LayoutBrowser extends Component {
     constructor(props) {
         super(props);
@@ -38,7 +39,7 @@ class LayoutBrowser extends Component {
         if (this.state.layoutNumber === 0)
             actualLayoutToShow = (<MostlyFluid layoutStructure={layoutStructure}/>);
         else
-            actualLayoutToShow  = <ColumnDrop layoutStructure={layoutStructure}/>;
+            actualLayoutToShow  = (<ColumnDrop layoutStructure={layoutStructure}/>);
         return (
                 <div className="LayoutBrowser">
                     <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth} />
@@ -52,8 +53,6 @@ class LayoutBrowser extends Component {
                         <ResizeLayout updateViewerWidth={this.updateViewerWidth}/>
                     </div>
                 </div>
-
-
         );
     }
 }
