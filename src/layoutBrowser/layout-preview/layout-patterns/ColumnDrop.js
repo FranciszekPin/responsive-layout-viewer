@@ -1,4 +1,4 @@
-import './ColumnDrop.css';
+import './ColumnDrop.scss';
 import './LayoutStyles.scss';
 import {Component} from "react";
 
