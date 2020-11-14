@@ -23,6 +23,7 @@ yarn-error.log*
 # stylesheet
 *.css
 *.css.map
+*.scssc
 
 # ide files
 .idea/
