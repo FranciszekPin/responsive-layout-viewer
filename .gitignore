@@ -21,8 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # stylesheet
-.css
-.css.map
+*.css
+*.css.map
 
 # ide files
 .idea/
