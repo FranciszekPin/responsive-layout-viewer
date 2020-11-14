@@ -1,4 +1,4 @@
-import './LayoutStyles.css';
+import './LayoutStyles.scss';
 
 function LayoutStructure(props) {
         let actualClassName;

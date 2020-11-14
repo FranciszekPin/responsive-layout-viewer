@@ -1,5 +1,5 @@
 import './ColumnDrop.css';
-import './LayoutStyles.css';
+import './LayoutStyles.scss';
 import {Component} from "react";
 
 class ColumnDrop extends Component {

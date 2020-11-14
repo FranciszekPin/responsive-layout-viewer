@@ -1,4 +1,4 @@
-import './LayoutStyles.css';
+import './LayoutStyles.scss';
 import './MostlyFluid.css';
 import {Component} from "react";
 

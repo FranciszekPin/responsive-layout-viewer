@@ -1,4 +1,4 @@
-import './LayoutBrowser.css'
+import './LayoutBrowser.scss'
 import LayoutSwitcherLeft from "./layout-switcher/LayoutSwitcherLeft";
 import LayoutSwitcherRight from "./layout-switcher/LayoutSwitcherRight";
 import LayoutPreview from "./layout-preview/LayoutPreview";

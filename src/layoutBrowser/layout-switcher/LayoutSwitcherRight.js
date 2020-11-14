@@ -1,4 +1,4 @@
-import './LayoutSwitcher.css'
+import './LayoutSwitcher.scss'
 
 function LayoutSwitcherRight(props) {
     const rightArrow = '>';

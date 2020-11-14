@@ -1,4 +1,4 @@
-import './LayoutPreview.css'
+import './LayoutPreview.scss'
 
 function LayoutPreview(props) {
     return (

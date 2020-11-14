@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import './layoutBrowser/LayoutBrowser'
 import LayoutBrowser from "./layoutBrowser/LayoutBrowser";
 
