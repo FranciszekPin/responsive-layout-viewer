@@ -8,7 +8,7 @@ import MostlyFluid from "./layout-preview/layout-patterns/MostlyFluid";
 import ColumnDrop from "./layout-preview/layout-patterns/ColumnDrop";
 import ResizeLayout from "./resize-layout-slider/ResizeLayout";
 import LayoutStructure from "./layout-preview/layout-patterns/layoutStructure";
-import {act} from "@testing-library/react";
+import Controls from "./Controls";
 
 class LayoutBrowser extends Component {
     constructor(props) {
@@ -51,14 +51,11 @@ class LayoutBrowser extends Component {
                 <div className="LayoutBrowser">
                     <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth} />
 
-                    <div className="UserControl">
-                        <div className="NavigationButtons">
-                            <LayoutSwitcherLeft onClick={this.decrementLayoutNumber}/>
-                            <LayoutSwitcherRight onClick={this.incrementLayoutNumber}/>
-                        </div>
-
-                        <ResizeLayout updateViewerWidth={this.updateViewerWidth}/>
-                    </div>
+                    <Controls
+                        incrementLayoutNumber={this.incrementLayoutNumber}
+                        decrementLayoutNumber={this.decrementLayoutNumber}
+                        updateViewerWidth={this.updateViewerWidth}
+                    />
                 </div>
         );
     }
