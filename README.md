@@ -1,2 +1,2 @@
 # Responsive layout viewer
-Project whitch goal is to train my web development skills
+Simple web application that allows to browse different responsive web design patterns.
