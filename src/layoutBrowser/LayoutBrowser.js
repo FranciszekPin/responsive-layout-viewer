@@ -1,5 +1,5 @@
-import React from 'react'
-import './LayoutBrowser.scss'
+import React from 'react';
+import './LayoutBrowser.scss';
 import LayoutSwitcherLeft from "./layout-switcher/LayoutSwitcherLeft";
 import LayoutSwitcherRight from "./layout-switcher/LayoutSwitcherRight";
 import LayoutPreview from "./layout-preview/LayoutPreview";
@@ -16,6 +16,7 @@ class LayoutBrowser extends Component {
         super(props);
         this.state = {layoutNumber: 0, viewerWidth: 800};
         this.numberOfLayouts = 3;
+        this.layoutTitles = ["MostlyFluid","ColumnDrop","TinyTweaks"];
         this.layouts = [<MostlyFluid />, <ColumnDrop />, <TinyTweaks />];
     }
 
@@ -44,12 +45,18 @@ class LayoutBrowser extends Component {
         return React.cloneElement(actualLayoutToShow, {layoutStructure: layoutStructure})
     }
 
+    getUpdatedTitleName = () => {
+        return this.layoutTitles[this.state.layoutNumber];
+    }
+
 
     render() {
         const actualLayoutToShow = this.getUpdatedLayoutToShow();
+        const actualTitleToShow = this.getUpdatedTitleName();
 
         return (
                 <div className="LayoutBrowser">
+                    <p className="title">{actualTitleToShow}</p>
                     <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth} />
 
                     <Controls
