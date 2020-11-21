@@ -11,7 +11,7 @@ function Controls(props) {
                 <LayoutSwitcherLeft onClick={props.decrementLayoutNumber}/>
                 <LayoutSwitcherRight onClick={props.incrementLayoutNumber}/>
             </div>
-
+            <p className="information">↓ Scroll down to read more about layout ↓</p>
             <ResizeLayout updateViewerWidth={props.updateViewerWidth}/>
         </div>
     )

@@ -16,8 +16,8 @@ class LayoutBrowser extends Component {
         super(props);
         this.state = {layoutNumber: 0, viewerWidth: 800};
         this.numberOfLayouts = 3;
-        this.layoutTitles = ["MostlyFluid","ColumnDrop","TinyTweaks"];
-        this.layouts = [<MostlyFluid />, <ColumnDrop />, <TinyTweaks />];
+        this.layoutTitles = ["MostlyFluid", "ColumnDrop", "TinyTweaks"];
+        this.layouts = [<MostlyFluid/>, <ColumnDrop/>, <TinyTweaks/>];
     }
 
 
@@ -40,7 +40,7 @@ class LayoutBrowser extends Component {
     }
 
     getUpdatedLayoutToShow = () => {
-        const layoutStructure = <LayoutStructure viewerWidth={this.state.viewerWidth} />
+        const layoutStructure = <LayoutStructure viewerWidth={this.state.viewerWidth}/>
         let actualLayoutToShow = this.layouts[this.state.layoutNumber];
         return React.cloneElement(actualLayoutToShow, {layoutStructure: layoutStructure})
     }
@@ -55,16 +55,19 @@ class LayoutBrowser extends Component {
         const actualTitleToShow = this.getUpdatedTitleName();
 
         return (
-                <div className="LayoutBrowser">
-                    <p className="title">{actualTitleToShow}</p>
-                    <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth} />
+            <div className="LayoutBrowser">
+                <p className="title">{actualTitleToShow}</p>
+                <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth}/>
 
-                    <Controls
-                        incrementLayoutNumber={this.incrementLayoutNumber}
-                        decrementLayoutNumber={this.decrementLayoutNumber}
-                        updateViewerWidth={this.updateViewerWidth}
-                    />
-                </div>
+                <Controls
+                    incrementLayoutNumber={this.incrementLayoutNumber}
+                    decrementLayoutNumber={this.decrementLayoutNumber}
+                    updateViewerWidth={this.updateViewerWidth}
+                />
+
+
+
+            </div>
         );
     }
 }
