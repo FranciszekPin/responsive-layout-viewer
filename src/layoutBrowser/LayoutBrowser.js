@@ -10,6 +10,7 @@ import ResizeLayout from "./resize-layout-slider/ResizeLayout";
 import LayoutStructure from "./layout-preview/layout-patterns/layoutStructure";
 import Controls from "./Controls";
 import TinyTweaks from "./layout-preview/layout-patterns/TinyTweaks";
+import LayoutDescription from "./LayoutDescription";
 
 class LayoutBrowser extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class LayoutBrowser extends Component {
         this.numberOfLayouts = 3;
         this.layoutTitles = ["MostlyFluid", "ColumnDrop", "TinyTweaks"];
         this.layouts = [<MostlyFluid/>, <ColumnDrop/>, <TinyTweaks/>];
+        this.descriptionText = [<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur autem deserunt dignissimos eaque error esse, ex fugit, ipsa, iure laudantium officia possimus quas quisquam quos sunt tempora tempore ut!</p>];
     }
 
 
@@ -65,7 +67,7 @@ class LayoutBrowser extends Component {
                     updateViewerWidth={this.updateViewerWidth}
                 />
 
-
+                <LayoutDescription descriptionText={this.descriptionText[0]} />
 
             </div>
         );
