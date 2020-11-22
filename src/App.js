@@ -9,6 +9,7 @@ import Controls from "./controls/Controls";
 import TinyTweaks from "./layout-preview/layout-patterns/TinyTweaks";
 import LayoutDescription from "./layout-description/LayoutDescription";
 import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 class App extends Component {
     constructor(props) {
@@ -66,7 +67,7 @@ class App extends Component {
                 />
 
                 <LayoutDescription layoutNumber={this.state.layoutNumber} />
-
+                <Footer />
             </div>
         );
     }
