@@ -19,8 +19,7 @@ class LayoutBrowser extends Component {
         this.numberOfLayouts = 3;
         this.layoutTitles = ["MostlyFluid", "ColumnDrop", "TinyTweaks"];
         this.layouts = [<MostlyFluid/>, <ColumnDrop/>, <TinyTweaks/>];
-        this.descriptionText = [<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur autem deserunt dignissimos eaque error esse, ex fugit, ipsa, iure laudantium officia possimus quas quisquam quos sunt tempora tempore ut!</p>];
-    }
+         }
 
 
     incrementLayoutNumber = () => {
@@ -67,7 +66,7 @@ class LayoutBrowser extends Component {
                     updateViewerWidth={this.updateViewerWidth}
                 />
 
-                <LayoutDescription descriptionText={this.descriptionText[0]} />
+                <LayoutDescription layoutNumber={this.state.layoutNumber} />
 
             </div>
         );
