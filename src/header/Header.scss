@@ -1,4 +1,14 @@
 .Header {
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4vh;
+  background-color: #1e2027;
+  padding: 3vh 0;
+
+}
+
+.HeaderText {
   height: 4vh;
   display: flex;
   flex-direction: row;
@@ -6,9 +16,8 @@
   justify-content: space-between;
   font-size: 3vh;
   color: white;
+  margin: 0 auto;
   width: 50vw;
-  margin: 3vh auto;
-
 }
 
 .title{
