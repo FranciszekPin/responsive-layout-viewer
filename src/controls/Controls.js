@@ -6,13 +6,15 @@ import React from "react";
 
 function Controls(props) {
     return (
-        <div className="UserControl">
-            <div className="NavigationButtons">
-                <LayoutSwitcherLeft onClick={props.decrementLayoutNumber}/>
-                <LayoutSwitcherRight onClick={props.incrementLayoutNumber}/>
+        <div className="ControlPanelContainer">
+            <div className="ControlPanel">
+                <div className="NavigationButtons">
+                    <LayoutSwitcherLeft onClick={props.decrementLayoutNumber}/>
+                    <LayoutSwitcherRight onClick={props.incrementLayoutNumber}/>
+                </div>
+                <p className="information">↓ Scroll down to read more about layout ↓</p>
+                <ResizeLayout updateViewerWidth={props.updateViewerWidth}/>
             </div>
-            <p className="information">↓ Scroll down to read more about layout ↓</p>
-            <ResizeLayout updateViewerWidth={props.updateViewerWidth}/>
         </div>
     )
 }
