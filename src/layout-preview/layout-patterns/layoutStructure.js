@@ -10,11 +10,11 @@ function LayoutStructure(props) {
                 actualClassName = "container large";
         return (
             <div className={actualClassName} >
-                    <div className="c1"></div>
-                    <div className="c2"></div>
-                    <div className="c3"></div>
-                    <div className="c4"></div>
-                    <div className="c5"></div>
+                    <div className="c1" />
+                    <div className="c2" />
+                    <div className="c3" />
+                    <div className="c4" />
+                    <div className="c5" />
             </div>
         );
 }

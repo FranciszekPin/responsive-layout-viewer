@@ -8,6 +8,7 @@ import LayoutStructure from "./layout-preview/layout-patterns/layoutStructure";
 import Controls from "./controls/Controls";
 import TinyTweaks from "./layout-preview/layout-patterns/TinyTweaks";
 import LayoutDescription from "./layout-description/LayoutDescription";
+import Header from "./header/Header";
 
 class App extends Component {
     constructor(props) {
@@ -54,12 +55,7 @@ class App extends Component {
 
         return (
             <div className="LayoutBrowser">
-                <header>
-                    <div className="Header">
-                        <p>Responsive Layout Pattern Viewer</p>
-                        <p className="title">{actualTitleToShow}</p>
-                    </div>
-                </header>
+                <Header actualTitleToShow={actualTitleToShow}/>
 
                 <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth}/>
 
