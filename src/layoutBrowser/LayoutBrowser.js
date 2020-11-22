@@ -57,7 +57,13 @@ class LayoutBrowser extends Component {
 
         return (
             <div className="LayoutBrowser">
-                <p className="title">{actualTitleToShow}</p>
+                <header>
+                    <div className="Header">
+                        <p>Responsive Layout Pattern Viewer</p>
+                        <p className="title">{actualTitleToShow}</p>
+                    </div>
+                </header>
+
                 <LayoutPreview layoutToShow={actualLayoutToShow} width={this.state.viewerWidth}/>
 
                 <Controls
